@@ -1,0 +1,5 @@
+.body{
+    /* background-color: powderblue; */
+    background-image: url("../../../assets/img/mainImage.jpg");
+    height: -webkit-fill-available;
+}

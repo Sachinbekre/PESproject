@@ -1,0 +1,52 @@
+<div class="body">
+  <div class="row">
+    <div class="col-md-12" style="padding-top: 5%;text-align: center">
+      <u>
+        <h4 style="color: palegreen">JMS (Joint Measurement Sheet) Details</h4>
+      </u>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+      <button class="btn btn-sm btn-primary"  routerLink="/dashboard"> Home</button>
+      <button class="btn btn-sm btn-primary" style="float: right" routerLink="/addJms"><i class="fa fa-plus"></i> Add jms</button>
+    </div>
+    </div>
+    <br>
+  </div>
+  <mat-card class="container">
+    <table class="table table-bordered" >
+      <thead>
+        <tr>
+          <th>Site ID</th>
+          <th>Location Name</th>
+          <th>Sity Type</th>
+          <th>Work Order NO</th>
+          <th> Date</th>
+          <th>Description</th>
+          <th>Unit</th>
+          <th>Qty</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let data of jmsData">
+        <tr>
+          <td>{{data.siteId}}</td>
+          <td>{{data.locationName}}</td>
+          <td>{{data.siteType}}</td>
+          <td>{{data.woNo}}</td>
+          <td>{{data.date}}</td>
+          <td>{{data.description}}</td>
+          <td>{{data.unit}}</td>
+          <td>{{data.qty}}</td>
+          <td>
+            <!-- <button class="btn btn-info" (click)="viewPatient(data)" title="View"><i class="fa fa-eye"></i></button>&nbsp; -->
+            <button class="btn btn-sm btn-success" (click)="edit(data)" title="Edit"><i class="fa fa-pencil"></i></button>&nbsp;
+            <button class="btn btn-sm btn-danger" (click)="delete(data._id,data)" title="Delete"><i class="fa fa-trash"></i></button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card>
+</div>

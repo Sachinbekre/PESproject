@@ -1,0 +1,80 @@
+<div class="row" style="width: 95%;margin-top: 2%">
+  <button class="btn btn-sm btn-danger noprint" matTooltip="Print" style="margin-left: auto" (click)='print()'><i
+      class="fa fa-print"></i>&nbsp;Print</button>
+</div>
+<div class="container" style="border: 2px solid black; margin-top: 1%">
+  <br>
+
+  <div class="row" style="font-family: 'Times New Roman', Times, serif">
+    <div style="width: 100%;text-align: center">
+      <img src="assets/img/logo.jpg" alt="" style="width: 210px;height: 75px;">
+      <div>
+        <h2 style="color: red">Tele Switching System</h2>
+      </div>
+      <div>
+        <h6>No.08, Shreyas , SFHS Area, Nandini Layout </h6>
+        <h6>Bengaluru -560096, Karnataka, India</h6>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <div>
+      <h5>Workorder Number : {{WRK_NO}}</h5>
+    </div>
+    <div>
+      <h5>Location : {{LOCATION}}</h5>
+    </div>
+    <div>
+      <h5>Date of Workorder : {{DATE}}</h5>
+    </div>
+  </div>
+  <br>
+  <div style="width: 100%" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <table class="table table-bordered">
+      <thead class="thead-light">
+        <tr>
+          <th>S.No</th>
+          <th>Item Code</th>
+          <th>Description of Work</th>
+          <th>Unit</th>
+          <th>Qty</th>
+          <th>Amount</th>
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let data of displayData;let i = index">
+          <td>{{i+1}}</td>
+          <td>{{data.itemCode}}</td>
+          <td>{{data.description}}</td>
+          <td>{{data.uom}}</td>
+          <td>{{data.qty}}</td>
+          <td id="align">₹ {{data.amount}}</td>
+        </tr>
+        <tr>
+          <td colspan="5">
+            <h5>Total</h5>
+          </td>
+          <td id="align">
+            <h5>₹ {{getTotalCost()}}</h5>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="row" style="border: 1px solid black;margin: 15px 1px 1px 1px;height: 100px;font-family: Cambria">
+    <h4 style="padding-left: 2px">Remarks :</h4>
+  </div>
+  <br>
+  <div class="row" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <div class="col-md-8">
+      <h5>Engineer Signature:</h5>
+    </div>
+    <div class="col-md-4">
+      <h5>Manager Signature:</h5>
+    </div>
+  </div>
+  <br>
+  <br>
+</div>

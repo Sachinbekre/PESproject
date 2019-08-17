@@ -1,0 +1,14 @@
+.alert{
+    padding: 0px;
+  }
+.app-body{
+    /* background-color: powderblue; */
+    background-image: url('../../../assets/img/mainImage.jpg');
+    height: -webkit-fill-available;
+  }
+.profileImg{
+  margin-left: auto;
+  margin-right: auto;
+  height: 90px;
+  width: 90px;
+}

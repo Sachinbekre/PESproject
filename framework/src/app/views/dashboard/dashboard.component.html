@@ -1,0 +1,198 @@
+<div class="mediaContent" style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" style="background-color: #c5d0e4 !important;">
+        <a class="navbar-brand">
+            <img src="assets/img/logo.jpg" alt="" style="height: 40px;width: 80px">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown" style="padding-top: 1%">
+                    <button class="btn btn-outline" type="button" (click)="scroll(home)">HOME
+                    </button>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item dropdown">
+                    <button class="btn btn-default" data-toggle="dropdown">OUR SERVICES
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li class="dropdown-submenu"><a class="dropdown-item dropdown-toggle btn-primary" data-toggle="dropdown"
+                                href="#"> <i class="fa fa-bar-chart fa-lg"></i> Work Order</a>
+                            <ul class="dropdown-menu">
+                                <a class="dropdown-item" routerLink="/workOrder">Civil Work</a>
+                                <a class="dropdown-item" routerLink="/workOrder">Wired Work</a>
+                                <a class="dropdown-item" routerLink="/workOrder">Wireless Work</a>
+                            </ul>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-item" data-toggle="dropdown"
+                            routerLink="/ims"><i class="fa fa-tv fa-lg"></i> IMS (Indivisual Measurement Sheet)</a>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-item" data-toggle="dropdown"
+                            routerLink="/jms"><i class="fa fa-cubes fa-lg"></i> JMS (Joint Measurement Sheet)</a>
+                        </li>
+                        <li class="dropdown"><a class="dropdown-item" data-toggle="dropdown"
+                            routerLink="/billing"><i class="fa fa-newspaper-o fa-lg"></i> BILLING</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown" style="padding-top: 1%">
+                    <button class="btn btn-outline" type="button" (click)="scroll(About)">ABOUT US
+                    </button>
+                </li>&nbsp;&nbsp;
+                <li class="nav-item dropdown" style="padding-top: 1%">
+                    <button class="btn btn-outline" type="button" (click)="scroll(Contact)">CONTACT US
+                    </button>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <button class="btn btn-default" type="button">
+                        <div><img class="profileimg" src="assets/img/avatars/8.jpg" alt=""></div>
+                    </button>
+                    <div class="dropdown-menu dropleft" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item">
+                            <div class="row">
+                                <div style="display: flex">
+                                    <img class="profileimg" src="assets/img/avatars/8.jpg" alt="">&nbsp;&nbsp;
+                                    <div>
+                                        <div><b>Jhon mosh</b> </div>
+                                        <div>moshmiller@gmail.com</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-bell-o fa-lg"></i>
+                            My notifications<span class="badge badge-pill badge-danger" style=" position: relative;
+                    left: 5px;">3</span></a>
+                        <a class="dropdown-item" href="#"><i class="fa fa-commenting fa-lg"></i> Messages
+                            <span class="badge badge-pill badge-danger" style=" position: relative;
+                    left: 5px;">2</span></a>
+                        <a class="dropdown-item" href="">Help</a>
+                        <a class="dropdown-item" href="">Logout</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+<!-- <app-header-bar></app-header-bar> -->
+
+<div #home class="col-md-12" style="padding: 0px">
+ 
+    <div id="sl" style="width:750px;height:200px;margin:0 auto;margin-bottom: 0px;">
+     
+        
+      
+    <!-- Slide 1-->
+    <div class="ls-slide" data-ls="duration:4000; kenburnsscale:1.2;" >
+      <img height="300" width="750" src="assets/ls_img/layer1.jpg" class="ls-bg" alt="" />
+      <p style="text-shadow: 0 15px 15px rgba(0,0,0,.5);top:58%; left:50%; text-align:center; font-weight:50; font-size:50px; font-family:Pacifico; width:60%; line-height:80px; color:#fce6c5; white-space:normal;" class="ls-l" data-ls="durationin:2000; easingin:easeOutQuart; fadein:false; rotatein:-3; offsetxout:left; durationout:750; startatout:allinandloopend + 1500; easingout:easeInQuart; fadeout:false; rotateout:-10; texttransitionin:true; texttypein:words_center; textoffsetyin:50|-50; textdurationin:1500; texteasingin:easeOutQuart; textstartatin:transitioninstart + 0;">TeleSwitching System</p>
+    </div>
+    
+    
+    <!-- Slide 2-->
+    <div class="ls-slide" data-ls="duration:4000;">
+      <img  height="300" width="750" src="assets/ls_img/layer2.jpg" class="ls-bg" alt="" />
+    </div>
+    
+    
+    <!-- Slide 3-->
+    <div class="ls-slide" data-ls="duration:4000;">
+      <img height="300" width="750"  src="assets/ls_img/four.png" class="ls-bg" alt="" />
+    </div>
+
+    <!-- Slide 4-->
+    <div class="ls-slide" data-ls="duration:4000;">
+        <img height="300" width="750"  src="assets/ls_img/two.jpg" class="ls-bg" alt="" />
+      </div>
+  </div>
+  </div>
+
+  <div class="row">
+      <div #About class="col-md-12" style="padding-top: 10%">
+        <div class="col-md-12" style="text-align: center">
+          <h2><b><u>ABOUT US</u></b></h2>
+        </div>
+        <div class="col-md-8" style="margin-left: auto;margin-right: auto">
+          <p><strong>Tele Switching Systems</strong>, Bangalore has established in the year 1997. We are in major role for
+            Global Communication solutions such as servicing the Active Infra needs of Telecom Equipments. We have hands
+            on experience in C-DOT Switching Exchanges Technology.
+            All in all, we are experienced in Telecom management, Technology expertise, Maintenance & deep Service support
+            till troubleshooting of electronics, involved in Telecom industry towards upward trend.</p>
+          <p>Our team is well equipped with much man hour experience in the field of GSM/CDMA Network Installation &
+            commissioning.
+            All our Technical Supervisors are well trained from Reputed Telecom OEM & Operators.</p>
+          <p>The Company will always care about the trend & respective training will be provided for Technical staff to
+            upgrade themselves. Our overall Team comprises of 70 man years of human expertise.</p>
+          <ul>
+            <li>We are equipped with good laboratory for our Equipments calibrations.</li>
+            <li>We have internal Inventory Management System to maintain / update the Vendors.</li>
+            <li>We generate Reports to our Vendors by online to the respective job done & does maintenance.</li>
+            <li>Our CEO & team is dedicated to work under any circumstances as similar to 24x7 support.</li>
+          </ul>
+        </div>
+      </div>
+      <div #Contact class="col-md-12" style="padding-top: 8%">
+        <div class="col-md-12" style="text-align: center">
+          <h2><b><u>CONTACT US</u></b></h2>
+        </div>
+        <div class="col-md-10" style="margin-left: auto;margin-right: auto">
+          <div class="card" style="padding: 3%">
+            <div>
+              <h5>Contact Details</h5>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <label>Address</label>
+                <h6>Tele Switching Systems</h6>
+                <h6>Abhishek Y M (Partner)</h6>
+                <h6>No. 8, Shreyas ,SFHS Area </h6>
+                <h6>Nandini Layout,Nandini Layout </h6>
+                <h6>Bengaluru-560096 </h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+  
+    
+<!-- <div class="body" style="margin-top: 20px">
+  <div class="row">
+    <div class="col-md-12" style="padding-top: 5%;text-align: center">
+      <u>
+        <h4 style="color: aliceblue">Work Order Types</h4>
+      </u>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col-md-8" style="margin-left: auto;margin-right: auto">
+      <button class="btn btn-primary" routerLink="/ims">IMS (Individual Measurement Sheet)</button>&nbsp;&nbsp;
+      <button class="btn btn-primary" routerLink="/jms">JMS (Joint Measurement Sheet)</button>&nbsp;&nbsp;
+      <button class="btn btn-primary" routerLink="/billing">Billing</button>&nbsp;&nbsp;
+      <button class="btn btn-primary" routerLink="/">Logout</button>&nbsp;&nbsp;
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-4" id="card_main">
+        <mat-card class="mat_card" routerLink="/workOrder">Cevil Work</mat-card>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4" id="card_main">
+          <mat-card class="mat_card" routerLink="/workOrder">Wired Work</mat-card>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4" id="card_main">
+            <mat-card class="mat_card" routerLink="/workOrder">Wireless Work</mat-card>
+        </div>
+      </div>
+</div> -->
+<!-- <ng4-loading-spinner> </ng4-loading-spinner> -->

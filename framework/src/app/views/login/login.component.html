@@ -1,0 +1,63 @@
+<div class="app-body">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mx-auto">
+        <div class="card-group" style="margin-top: 120px;background-image: url('../../../assets/img/login.jpg')">
+          <div class="card p-4">
+            <div class="card-body">
+              <div class="row">
+                  <img class="profileImg" src="../../../assets/img/profile3.png">
+              </div>
+              <form #userForm="ngForm" appIdentityRevealed>
+                <div [hidden]="userForm.submitted">
+                  <h6 class="text-muted" style="text-align: center">Member Login</h6>
+                  <div class="form-group">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-user"></i></span>
+                      </div>
+                      <input  type="text" id="userName" name="userName" class="form-control form-control-sm" [(ngModel)]="user.userName"
+                        #userName="ngModel" placeholder="Username" required>
+                    </div>
+                    <div *ngIf="userName.invalid && (userName.dirty || userName.touched)" class="alert alert-danger">
+                      <div *ngIf="userName.errors.required">
+                        Username is required.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group mb-4">
+                      <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fa fa-lock"></i></span>
+                      </div>
+                      <input id="password" type="password" name="password" class="form-control form-control-sm" required minlength=""
+                        [(ngModel)]="user.password" #password="ngModel" placeholder="Password" (keyup.enter)="submitForm(userForm)" />
+                    </div>
+                    <div *ngIf="password.invalid && (password.dirty || password.touched)" class="alert alert-danger">
+                      <div *ngIf="password.errors.required">
+                        Password is required.
+                      </div>
+                      <div *ngIf="password.errors.minlength">
+                        Password must be at least 6 characters long.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row" style="text-align: center">
+                    <div class="col-6">
+                      <button type="button" class="btn btn-sm btn-primary px-4" [disabled]="userName.invalid || password.invalid"
+                         (click)="submitForm(userForm)" style="border-radius: 22px">Login</button>
+                    </div>
+                    <div class="col-6">
+                      <button type="reset" class="btn btn-sm btn-primary px-4" style="border-radius: 22px"
+                         >Clear</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+  <br>
+  <div class="card">
+    <div class="card-header">
+      <h5>Create Ims Details <button mat-raised-button class="float-sm-right" color="primary"
+          routerLink="/ims">Back</button></h5>
+    </div>
+    <div class="card-body">
+      <form #imsForm="ngForm" (ngSubmit)="createIms(imsForm)">
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="locationId">Location Id:</label>
+          <div class="col-md-6">
+            <input type="text" id="locationId" name="locationId" class="form-control" [(ngModel)]="locationId"
+              placeholder="Location Id">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="woNo">Work Order No :</label>
+          <div class="col-md-6">
+            <input type="text" id="woNo" name="woNo" class="form-control" [(ngModel)]="woNo"
+              placeholder="Work Order No">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="locationName">Location Name :</label>
+          <div class="col-md-6">
+            <input type="text" id="locationName" name="locationName" class="form-control" [(ngModel)]="locationName"
+              placeholder="Enter Location Name">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="startDate">Start Date :</label>
+          <div class="col-md-6">
+            <input type="text" id="startDate" name="startDate" class="form-control" [(ngModel)]="startDate" placeholder="Enter Start Date">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-md-3 col-form-label" for="endDate">Completion Date :</label>
+          <div class="col-md-6">
+            <input type="text" id="endDate" name="endDate" class="form-control" [(ngModel)]="endDate" placeholder="Enter Completion Date">
+            <!-- <input type="text" class="form-control"  #dp="bsDatepicker" bsDatepicker
+              name="dob" [(ngModel)]="dob" > -->
+          </div>
+        </div>
+        <div class="form-group row">
+          <div class="col-md-9">
+            <span class="pull-right">
+              <button type="submit" class="btn btn-primary" *ngIf="!updateHide">Submit</button>&nbsp;&nbsp;
+              <button class="btn btn-success" *ngIf="updateHide">Update</button>&nbsp;&nbsp;
+              <button type="reset" class="btn btn-danger" (click)="resetForm(woForm)">Reset</button>
+            </span>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

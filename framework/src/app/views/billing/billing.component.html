@@ -1,0 +1,140 @@
+<div class="app-body" *ngIf="bill">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 mx-auto">
+        <div class="card-group" style="margin-top: 40px;">
+          <div class="card">
+            <div class="card-body">
+              <h3 style="text-align: center;color: blue"><u>Billing</u></h3>
+            </div>
+            <div class="row form-group" style="width: 100%">
+              <div class="col-md-4">
+                <label for="" style="float: right">Enter the WorkOrder Number :</label>
+              </div>
+              <div class="col-md-4">
+                  <select name="" id="" class="form-control form-control-sm"  [(ngModel)]="selectedWoNo" >
+                      <option selected="selected" [value]="available" disabled hidden>--Select--</option>
+                    <option  *ngFor="let opt of tempWoNo" [value]="opt">{{opt}}</option>
+                  </select>
+                </div>
+            </div>
+            <div class="row form-group" style="width: 100%">
+                <div class="col-md-4">
+                  <label for="" style="float: right">Enter the Location ID :</label>
+                </div>
+                <div class="col-md-4">
+                    <select name="" id="" class="form-control form-control-sm" [(ngModel)]="selectedlocationId">
+                        <option selected="selected" [value]="available" disabled hidden>--Select--</option>
+                      <option  *ngFor="let opt2 of locationID" [value]=opt2.locationId >{{opt2.locationId}}</option>
+                    </select>
+                  </div>
+              </div>
+              <div class="row form-group">
+                <div class="col-md-4" style="text-align: right">
+                  <button class="btn btn-danger" (click) ="generateBill()">Generate Bill</button>
+                </div>
+              </div>
+              <br>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- invoice bill -->
+
+<!-- <div class="container" style="border: 2px solid black; margin-top: 1%" *ngIf="!bill">
+  <div class="row" style="width: 95%;margin-top: 2%" >
+    <button class="btn btn-sm btn-danger" matTooltip="Print" style="margin-left: auto"><i class="fa fa-print"></i>&nbsp;Print</button>
+  </div>
+  <br>
+
+  <div class="row" style="margin-left: 0px !important;margin-right: 0px !important">
+      <div style="width: 100%;text-align: center">
+          <div>
+              <h2 style="color: red">Name of the Company</h2>
+          </div>
+          <div><h5>Company Address</h5></div>
+      </div>
+  </div>
+  <br>
+  <div>
+      <h6>Workorder Number : 123456</h6>
+  </div>
+  <div>
+      <h6>Location : Mandya</h6>
+  </div>
+  <div>
+      <h6>Date of Workorder : 12/12/12</h6>
+  </div>
+  <br>
+      <div style="width: 100%">
+         
+
+          <div class="example-container mat-elevation-z8">
+              <table mat-table [dataSource]="transactions">
+                <ng-container matColumnDef="item">
+                  <th mat-header-cell *matHeaderCellDef> Item Code </th>
+                  <td mat-cell *matCellDef="let transaction"> {{transaction.item}} </td>
+                  <td mat-footer-cell *matFooterCellDef> Total </td>
+                </ng-container>
+
+                <ng-container matColumnDef="description">
+                  <th mat-header-cell *matHeaderCellDef> Description </th>
+                  <td mat-cell *matCellDef="let transaction"> {{transaction.description}} </td>
+                  <td mat-footer-cell *matFooterCellDef>  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="date">
+                  <th mat-header-cell *matHeaderCellDef> Date </th>
+                  <td mat-cell *matCellDef="let transaction"> {{transaction.date}} </td>
+                  <td mat-footer-cell *matFooterCellDef>  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="UOM">
+                  <th mat-header-cell *matHeaderCellDef> UOM </th>
+                  <td mat-cell *matCellDef="let transaction"> {{transaction.UOM}} </td>
+                  <td mat-footer-cell *matFooterCellDef>  </td>
+                </ng-container>
+
+                <ng-container matColumnDef="rate">
+                  <th mat-header-cell *matHeaderCellDef> Rate </th>
+                  <td mat-cell *matCellDef="let transaction"> {{transaction.rate}} </td>
+                  <td mat-footer-cell *matFooterCellDef>  </td>
+                </ng-container>
+
+             <ng-container matColumnDef="quantity">
+              <th mat-header-cell *matHeaderCellDef> Quantity </th>
+              <td mat-cell *matCellDef="let transaction"> {{transaction.quantity}} </td>
+              <td mat-footer-cell *matFooterCellDef>  </td>
+            </ng-container>
+        
+                <ng-container matColumnDef="amount">
+                  <th mat-header-cell *matHeaderCellDef> Amount </th>
+                  <td mat-cell *matCellDef="let transaction"> {{transaction.amount | currency: '₹'}} </td>
+                  <td mat-footer-cell *matFooterCellDef> {{getTotalCost() | currency:'₹'}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns;sticky: true"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+                <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+              </table>
+            </div>
+      </div>
+      <div class="row" style="border: 1px solid black;margin: 15px 1px 1px 1px;height: 100px;">
+        <h4 style="padding-left: 2px">Remarks :</h4>
+      </div>
+      <br>
+      <div class="row">
+          <div class="col-md-8">
+              <h5>Engineer Signature:</h5>
+          </div>
+          <div class="col-md-4">
+              <h5>Manager Signature:</h5>
+          </div>
+      </div>
+      <br>
+      <br>
+</div> -->
